@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable and Blinking text</title>
+</head>
+<style>
+    @keyframes Blinking-text{
+        0%,100%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+    }
+    @keyframes Scroll-text{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100);
+        }
+    }
+    body{
+        display: flex;
+        overflow: hidden;
+    }
+    .Scroll-text{
+        animation: Scroll-text 11s linear infinite;
+        color: red;
+    }
+    .Blink-text{
+        animation: Blinking-text 20s linear infinite;
+        color: blue;
+    }
+</style>
+<body>
+    <p class="Scroll-text">Hello Macha</p><br><br>
+    <p class="Blink-text">I am Macha</p>
+    
+</body>
+</html>
